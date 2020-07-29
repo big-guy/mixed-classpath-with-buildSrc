@@ -1,0 +1,1 @@
+`gradle buildEnvironment` shows that Guava 27.0.1 is available, but Guava 19 is also on the classpath for the build script (from buildSrc).
