@@ -1,0 +1,17 @@
+buildscript {
+  repositories {
+	jcenter()
+  }
+  dependencies {
+        classpath group: 'com.google.guava', name: 'guava', version: '27.0-jre'  
+  }
+}
+
+// This class was removed in Guava 20
+println "class exists? " + com.google.common.util.concurrent.FutureFallback
+
+// This field was added in Guava 27 (but the class exists in Guava 19)
+// FAIL: println "does this work? " + com.google.common.net.HttpHeaders.EARLY_DATA
+
+// This class was added in Guava 27
+println "class exists? " + com.google.common.util.concurrent.ExecutionSequencer
